@@ -1,0 +1,47 @@
+<html>
+  <head> </head>
+  <body>
+    <h1>Counter</h1>
+
+   <input value={contador}>
+
+    <div id="buttons">
+      <button id="DECREASE" onclick="`${contador = counterDecrease(contador)}`">
+        DECREASE
+      </button>
+
+      <button id="RESET" onclick="`${contador = counterReset(contador)}`">
+        RESET
+      </button>
+
+      <button
+        id="INCREASE"
+        onclick="`${contador = counterIncrease(contador)}},`"
+      >
+        INCREASE
+      </button>
+    </div>
+
+    <script>
+      let contador = 0;
+
+      const counterDecrease = (counter) => {
+        counter -= 1;
+        console.log(counter);
+        return counter;
+      };
+
+      const counterReset = (counter) => {
+        counter = 0;
+        console.log(counter);
+        return counter;
+      };
+
+      function counterIncrease(counter) {
+        counter += 1;
+        console.log(counter);
+        return counter;
+      }
+    </script>
+  </body>
+</html>

@@ -1,6 +1,24 @@
 <html>
-    <head></head>
-    <body>
-        
-    </body>
+  <head></head>
+  <body>
+    <button onclick="{clicar()}">Change Color</button>
+  </body>
+  <style>
+    button {
+      position: relative;
+      left: 50%;
+      top: 60%;
+      background-color: white;
+    }
+  </style>
+  <script>
+    function clicar() {
+      document.body.style.backgroundColor = `rgb(${Math.floor(
+        100 * Math.random()
+      )},${Math.floor(100 * Math.random())},${Math.floor(
+        100 * Math.random()
+      )})`;
+      console.log("Clicou");
+    }
+  </script>
 </html>
